@@ -48,3 +48,13 @@ document.addEventListener("DOMContentLoaded", () => {
     form.reset();
   });
 });
+
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".bar").forEach((bar) => {
+    const rect = bar.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      bar.style.width = bar.getAttribute("data-width");
+    }
+  });
+});
+

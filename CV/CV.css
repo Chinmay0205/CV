@@ -22,6 +22,15 @@ body {
   scroll-behavior: smooth;
 }
 
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.project, .bar, header, footer {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
 header {
   background-color: var(--primary-color);
   padding: 1rem;
@@ -175,3 +184,30 @@ footer {
 html {
   scroll-behavior: smooth;
 }
+
+.project {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+}
+body.dark-mode {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
